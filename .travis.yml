@@ -1,0 +1,78 @@
+# emma
+language: node_js
+env:
+  global:
+    - NODE_ENV=test
+    - SECRET_KEY=traeghiteslozae
+node_js: 
+  - "stable"
+cache:
+  directories:
+    - "node_modules"
+script: npm run test
+after_success: 'npm run coverage'
+after_failure: 'cat /home/travis/.npm/_logs/2019-04-*-debug.log'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# language: node_js
+
+# addons:
+#     code_climate:
+#         repo_token: 
+#           secure: "05f0b3d5fa8022ebec6aabadbb88534f95411c40aa96c89c793d22d233285440"
+# script: istanbul cover node_modules/mocha/bin/_mocha -- -R spec
+# before_script:
+#   - npm install codeclimate-test-reporter istanbul -g
+# after_script:
+#   - codeclimate-test-reporter < ./coverage/lcov.info
+
+#   language: node_js
+# env:
+#   global:
+#     - NODE_ENV=test
+#     - SECRET_KEY=traeghiteslozae
+# node_js: 
+#   - "stable"
+# cache:
+#   directories:
+#     - "node_modules"
+# script: npm run test
+# after_success: 'npm run coverage'
+# after_failure: 'cat /home/travis/.npm/_logs/2019-04-*-debug.log'
+
+# language: node_js
+# node_js:
+#   - "8"
+# addons:
+#     code_climate:
+#         repo_token:
+#            secure: supersecuretokenencrypted
+# script: ./node_modules/.bin/nyc --reporter=lcov ./node_modules/mocha/bin/mocha --require @babel/register
+# before_script:
+#   - npm install codeclimate-test-reporter nyc -g
+# after_script:
+#   - codeclimate-test-reporter < ./coverage/lcov.info
